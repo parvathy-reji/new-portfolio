@@ -377,7 +377,7 @@ button, input, textarea {
 
 .nav-toggle {
     display: none;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     cursor: pointer;
     color: var(--title-color);
 }
@@ -484,14 +484,15 @@ button, input, textarea {
 
 .home-img-wrapper {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     border-radius: 50%;
     padding: 6px;
     background: linear-gradient(135deg, var(--first-color), var(--second-color));
     box-shadow: 0 15px 40px rgba(99, 102, 241, 0.25);
     overflow: hidden;
     transition: var(--transition-smooth);
+    margin-top: -0.5rem;
 }
 
 .home-img-wrapper:hover {
@@ -908,6 +909,14 @@ button, input, textarea {
     font-size: 0.8rem;
 }
 
+.project-description {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
 .project-actions {
     display: flex;
     justify-content: space-between;
@@ -1318,6 +1327,10 @@ button, input, textarea {
 
 /* Tablet & Mobile Navigation */
 @media screen and (max-width: 1023px) {
+    :root {
+        --header-height: 3.75rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: -100%;
@@ -1327,7 +1340,7 @@ button, input, textarea {
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
         border-bottom: 1px solid var(--border-color);
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         transition: var(--transition-smooth);
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
         display: flex;
@@ -1336,19 +1349,23 @@ button, input, textarea {
 
     .nav-list {
         flex-direction: column;
-        row-gap: 1.5rem;
+        row-gap: 1rem;
         align-items: center;
         width: 100%;
     }
 
     .nav-link {
-        padding: .5rem 1.5rem;
+        padding: .4rem 1.25rem;
         width: 100%;
         text-align: center;
     }
 
     .nav-indicator {
         display: none; /* Hide sliding indicator line on mobile view */
+    }
+
+    .nav-logo {
+        font-size: 1.15rem;
     }
 
     .nav-actions {
@@ -1391,8 +1408,8 @@ button, input, textarea {
     }
 
     .home-img-wrapper {
-        width: 230px;
-        height: 230px;
+        width: 220px;
+        height: 220px;
     }
 
     .contact-form-group {
